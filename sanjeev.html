@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <title>
+        Concreate Comprehensive Strength
+    </title>
+
+    <style>
+        body {
+            background-image: url("https://p4.wallpaperbetter.com/wallpaper/170/558/434/engineering-drawing-architecture-wallpaper-preview.jpg");
+            font-family: Verdana;
+            text-align: center;
+            background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+        background-color: #ffff;
+        opacity: 0.89;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ 
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: #05c46b;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        func pop(number re)
+        {
+        alert (re);
+        }
+    </script>
+</head>
+  
+<body>
+    <h1>Concreate Comprehensive Strength</h1>
+    <div class="container">
+    <!-- Create Form -->
+    <form action="{{url_for('predict')}}" method="post">
+        <fieldset>
+        <!-- Details -->
+        <div class="form-control">
+            <label for="cement" id="label-name">
+                Cement
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="number"
+                   id="cement"
+                   name="cement"
+                   placeholder="kg in a m3 mixture" required />(max=102.0 , min=540.0)
+        </div>
+  
+        <div class="form-control">
+            <label for="blast_furnace_slag" id="label-email">
+                Blast furnace Slag
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="number"
+                   id="blast_furnace_slag"
+                   name="blast_furnace_slag"
+                   placeholder="kg in a m3 mixture" required />(max=0.0 , min=359.4)
+        </div>
+  
+        <div class="form-control">
+            <label for="fly_ash" id="label-age">
+                Fly Ash
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="number"
+                   id="fly_ash"
+                   name="fly_ash"
+                   placeholder="kg in a m3 mixture" />(max=0.0 , min=200.1)
+        </div>
+        
+
+        <div class="form-control">
+            <label for="Water" id="label-name">
+                Water
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="number"
+                   id="Water"
+                   name="Water"
+                   placeholder="kg in a m3 mixture" required/>(max=121.8 , min=247.0)
+        </div>
+  
+        <div class="form-control">
+            <label for="superplasticizer" id="label-email">
+                Superplasticizer
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="number"
+                   id="superplasticizer"
+                   name="superplasticizer"
+                   placeholder="kg in a m3 mixture" required/>(max=0.0 , min=32.2)
+        </div>
+  
+        <div class="form-control">
+            <label for="coarse_aggregate" id="label-age">
+                Coarse Aggregate
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="number"
+                   id="coarse_aggregate"
+                   name="coarse_aggregate"
+                   placeholder="kg in a m3 mixture" required/>(max=801.0 , min=1145.0)
+        </div>
+
+        <div class="form-control">
+            <label for="fine_aggregate" id="label-name">
+               Fine Aggregate
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="number"
+                   id="fine_aggregate"
+                   name="fine_aggregate"
+                   placeholder="kg in a m3 mixture" required/>(max=594.0 , min=992.6)
+        </div>
+  
+        <div class="form-control">
+            <label for="age" id="label-email">
+                Age
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="number"
+                   id="age"
+                   name="age"
+                   placeholder="quantitative--Days to concrete to curate" required/>(max=63.1 , min=365.0)
+        </div>
+  
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Result">
+        </div>
+        
+        <div id="result">
+            <h1></h1><strong style="color:red">{{result}}</strong></h1>
+        </div>
+        </fieldset>
+        </form>
+    </div>
+    </body>
+</html>
