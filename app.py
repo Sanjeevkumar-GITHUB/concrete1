@@ -30,6 +30,6 @@ def predict():
 
     return render_template('index.html', result=output)
 
-
 if __name__ == '__main__':
     app.run()
+
