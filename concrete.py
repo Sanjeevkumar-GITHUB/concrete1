@@ -11,7 +11,7 @@ concrete = Flask(__name__)
 # Bind home function to URL
 @concrete.route('/')
 def home():
-    return render_template("sanjeev.html")
+    return render_template("index.html")
 
 
 # Bind predict function to URL
@@ -28,7 +28,7 @@ def predict():
 
     # Check the output values and retrive the result with html tag based on the value
 
-    return render_template('sanjeev.html', result=output)
+    return render_template('index.html', result=output)
 
 
 if __name__ == '__main__':
