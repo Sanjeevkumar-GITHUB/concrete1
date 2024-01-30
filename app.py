@@ -1,21 +1,22 @@
 import numpy as np
 import pickle
 from flask import Flask, request, render_template
+
 # Load ML model
 
-model=pickle.load(open('concrete_model.pkl', 'rb') )
+model = pickle.load(open("concrete_model.pkl", "rb"))
 # Create application
 app = Flask(__name__)
 
 
 # Bind home function to URL
-@app.route('/')
+@app.route("/")
 def home():
     return render_template("index.html")
 
 
 # Bind predict function to URL
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
     # Put all form entries values in a list
     features = [i for i in request.form.values()]
@@ -28,8 +29,8 @@ def predict():
 
     # Check the output values and retrive the result with html tag based on the value
 
-    return render_template('index.html', result=output)
+    return render_template("index.html", result=output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run()
-
