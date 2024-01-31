@@ -1,10 +1,16 @@
+import os
 import numpy as np
 import pickle
 from flask import Flask, request, render_template
 
 # Load ML model
-
-model = pickle.load(open("concrete_model.pkl", "rb"))
+model = ""
+# if os.path.getsize("concrete_model.pkl") > 0:
+#     model = pickle.load(open("concrete_model.pkl", "rb"))
+# with open("concrete_model.pkl", "rb") as f:
+#     model = pickle.load(f)
+with open("concrete_model_1.pkl", "rb") as f:
+    model = pickle.Unpickler(f)
 # Create application
 app = Flask(__name__)
 
